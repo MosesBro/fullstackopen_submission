@@ -1,4 +1,9 @@
 const Statistics = ({value}) => {
+  if ((value.good + value.neutral + value.bad) === 0) {
+    return(
+      <div>No feedback given</div>
+    )
+  }
   return(
     <div>
       good {value.good}<br />
@@ -8,6 +13,6 @@ const Statistics = ({value}) => {
       positive {(value.good) / (value.good + value.neutral + value.bad) * 100} %
   </div>
   )
-  }
+}
 
 export default Statistics
