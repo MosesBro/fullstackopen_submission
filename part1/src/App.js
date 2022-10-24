@@ -16,9 +16,12 @@ const App = () => {
       <Button handleClick={() => setToValue({ ...value, neutral: value.neutral + 1 })} text='neutral'/>      
       <Button handleClick={() => setToValue({ ...value, bad: value.bad + 1})} text='bad'/>
       <Header text='statistics' />
-        good {value.good}<br />
-        netural {value.neutral}<br />
-        bad {value.bad}<br />
+      good {value.good}<br />
+      netural {value.neutral}<br />
+      bad {value.bad}<br />
+      all {value.good + value.neutral + value.bad}<br />
+      average {(value.good - value.bad)/(value.good + value.neutral + value.bad)}<br />
+      positive {value.good/(value.good + value.neutral + value.bad) * 100} %<br />
     </div>
   )
 }
