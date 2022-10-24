@@ -16,7 +16,7 @@ const App = () => {
       <Button handleClick={() => setToValue({ ...value, neutral: value.neutral + 1 })} text='neutral'/>      
       <Button handleClick={() => setToValue({ ...value, bad: value.bad + 1})} text='bad'/>
       <Header text='statistics' />
-      <Statistics value={value}/>
+      <Statistics text="good" value={value}/>
 
     </div>
   )
