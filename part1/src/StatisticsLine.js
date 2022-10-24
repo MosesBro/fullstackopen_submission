@@ -1,15 +1,17 @@
 const StatisticsLine = ({text, value}) => {
   if (text==="positive") {
     return(
-      <div>
-        {text} {value} %
-      </div>
+      <tr>
+        <td>{text}  </td> 
+        <td> {value} %</td>
+      </tr>
     )
   }
     return(
-    <div>
-      {text} {value}
-    </div>
+    <tr>
+      <td>{text} </td>
+      <td> {value}</td>
+    </tr>
   )
 }
 
