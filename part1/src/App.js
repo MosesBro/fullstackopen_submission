@@ -1,4 +1,5 @@
 import Button from "./Button"
+import Header from "./Header"
 
 import { useState } from "react"
 
@@ -30,11 +31,15 @@ const App = () => {
 
   return (
     <div>
+      <Header text="Anecdote of the day" />
       {anecdotes[selected]} <br />
-      {console.log(votes)}
-      {console.log(selected)}
+      Has {votes[selected]} votes <br />
       <Button handleClick={() => updateVotes( selected ) } text='vote'/>  
       <Button handleClick={() => setSelected( getRandomInt(anecdotes.length) ) } text='next anecdote'/>
+      <Header text="Anecdote with most votes" />
+      {console.log(Math.max(...votes))}
+      {anecdotes[votes.indexOf((Math.max(...votes)))]} <br />
+      Has {Math.max(...votes)} votes
     </div>
   )
 }
